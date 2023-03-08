@@ -5,7 +5,7 @@
     that we can later reuse in the whole document */
     --bg: #201A23;
     --fg: #FBFBFB;
-    --accent: #44354A;
+    --accent: hsl(283, 17%, 25%);
     --highlight: #9E4770
 }
 
@@ -107,7 +107,8 @@ h2 {
 
 .action-btns {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     align-items: center;
     gap: 1.5em;
     margin-block: 1.5em;
@@ -128,4 +129,28 @@ h2 {
     .half-width {
         grid-column-start: span 2;
     }
+}
+
+/* Custom styles */
+
+.btn {
+    background: var(--highlight);
+    font-size: 1.8rem;
+    padding: 0.5em 1.5em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.btn:focus-visible {
+    outline: var(--accent) solid 3px;
+}
+
+.btn:hover {
+    background-color: var(--accent);
+
+}
+
+.btn:active {
+    transform: translateY(2px);
 }

@@ -81,13 +81,45 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     text-align: center;
-    /* This centers the container vertically and horizontally: */
-    display: grid;
-    place-content: center center;
+}
+
+h2 {
+    margin-bottom: 0.5em;
 }
 
 /* Layout */
 
 .container {
     padding: 3rem 2rem;
+    width: fit-content;
+    margin-inline: auto;
+}
+
+.pfp {
+    margin-inline: auto;
+}
+
+.action-btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5em;
+    margin-block: 1.5em;
+}
+
+.cards {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+}
+
+.full-width {
+    grid-column-start: span 2;
+}
+
+@media screen and (max-width: 600px) {
+
+    .half-width {
+        grid-column-start: span 2;
+    }
 }

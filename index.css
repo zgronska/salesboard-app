@@ -1,11 +1,10 @@
-/*
-COLOR PALETTE
-
-BLACK: #201A23
-WHITE: #FBFBFB
-DARK: #44354A
-COLOR: #9E4770
-*/
+:root {
+    /* Colours */
+    --bg: #201A23;
+    --fg: #FBFBFB;
+    --accent: #44354A;
+    --highlight: #9E4770
+}
 
 /* CSS reset */
 
@@ -56,4 +55,11 @@ h6 {
     overflow-wrap: break-word;
 }
 
-/*  */
+/* Basic styles */
+
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+}

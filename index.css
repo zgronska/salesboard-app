@@ -1,43 +1,58 @@
+/* Selects the root element of the document:
+   <html> in the case of HTML */
 :root {
-    /* Colours */
+    /* Here we can define colours as variables 
+    that we can later reuse in the whole document */
     --bg: #201A23;
     --fg: #FBFBFB;
     --accent: #44354A;
     --highlight: #9E4770
 }
 
-/* CSS reset */
+/*----------  CSS reset - overrides the styles imposed by the browser  ----------*/
 
+/* Every element will have the border-box property: 
+https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
+/* Removes all default margins and padding */
 * {
     margin: 0;
+    padding: 0;
 }
 
+/* Sets the height of the document */
 html,
 body {
     height: 100%;
 }
 
 body {
-    line-height: 1.5;
+    /* Sets the text line height for dyslexia accessibility */
+    line-height: calc(1em + 0.5rem);
+    /* Improves readability on MacOS */
     -webkit-font-smoothing: antialiased;
+    /* Sets the minimum height of the body element to the height of the viewport */
     min-height: 100vh;
 }
 
+/* All media elements */
 img,
 picture,
 video,
 canvas,
 svg {
+    /* Changes the display from inline to block */
     display: block;
+    /* Sets max-width to 100% so it resizes on different screens */
     max-width: 100%;
 }
 
+/* Sets the font of form elements and buttons to be the same as body font */
 input,
 button,
 textarea,
@@ -45,6 +60,7 @@ select {
     font: inherit;
 }
 
+/* Prevents text overflowing */
 p,
 h1,
 h2,
@@ -58,8 +74,52 @@ h6 {
 /* Basic styles */
 
 body {
+    /* Here we're setting the colours with 
+    the previously defined variables in :root */
     background: var(--bg);
     color: var(--fg);
     font-family: 'Poppins', sans-serif;
-    font-size: 30px;
+    font-size: 16px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 0.5em;
+}
+
+/* Layout */
+
+.container {
+    padding: 3rem 2rem;
+    width: fit-content;
+    margin-inline: auto;
+}
+
+.pfp {
+    margin-inline: auto;
+}
+
+.action-btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5em;
+    margin-block: 1.5em;
+}
+
+.cards {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+}
+
+.full-width {
+    grid-column-start: span 2;
+}
+
+@media screen and (max-width: 600px) {
+
+    .half-width {
+        grid-column-start: span 2;
+    }
 }

@@ -85,6 +85,7 @@ body {
 
 h2 {
     margin-bottom: 0.5em;
+    font-size: 1.25rem;
 }
 
 /* Layout */
@@ -93,6 +94,7 @@ h2 {
     padding: 3rem 2rem;
     width: fit-content;
     margin-inline: auto;
+    max-width: 38rem;
 }
 
 .pfp {
@@ -116,7 +118,7 @@ h2 {
 
 .cards {
     display: grid;
-    gap: 1rem;
+    gap: 1em 3em;
     grid-template-columns: repeat(2, minmax(100px, 1fr));
 }
 
@@ -132,6 +134,8 @@ h2 {
 }
 
 /* Custom styles */
+
+/* Buttons */
 
 .btn {
     background: var(--highlight);
@@ -153,4 +157,15 @@ h2 {
 
 .btn:active {
     transform: translateY(2px);
+}
+
+/* Pills */
+
+.pill {
+    background: var(--accent);
+    font-size: 1.5rem;
+    padding: 0.5em;
+    border-radius: 1em;
+    font-weight: 600;
+    margin-bottom: 1em;
 }

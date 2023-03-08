@@ -5,7 +5,7 @@
     that we can later reuse in the whole document */
     --bg: #201A23;
     --fg: #FBFBFB;
-    --accent: hsl(283, 17%, 25%);
+    --accent: #44354b;
     --highlight: #9E4770
 }
 
@@ -99,7 +99,11 @@ h2 {
 
 .pfp {
     margin-inline: auto;
-    background: var(--fg);
+    background-image: linear-gradient(45deg,
+            hsl(332deg 38% 45%) 0%,
+            hsl(337deg 20% 85%) 20%,
+            hsl(337deg 20% 85%) 80%,
+            hsl(332deg 38% 45%) 100%);
     border-radius: 50%;
     border: 0.5rem solid var(--accent);
     width: 150px;

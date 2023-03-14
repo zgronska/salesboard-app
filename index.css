@@ -1,12 +1,12 @@
 /* Selects the root element of the document:
    <html> in the case of HTML */
 :root {
-    /* Here we can define colours as variables 
+  /* Here we can define colours as variables 
     that we can later reuse in the whole document */
-    --bg: #201A23;
-    --fg: #FBFBFB;
-    --accent: #44354b;
-    --highlight: #9E4770
+  --bg: #201a23;
+  --fg: #fbfbfb;
+  --accent: #44354b;
+  --highlight: #9e4770;
 }
 
 /*----------  CSS reset - overrides the styles imposed by the browser  ----------*/
@@ -16,28 +16,28 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Removes all default margins and padding */
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* Sets the height of the document */
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    /* Sets the text line height for dyslexia accessibility */
-    line-height: calc(1em + 0.5rem);
-    /* Improves readability on MacOS */
-    -webkit-font-smoothing: antialiased;
-    /* Sets the minimum height of the body element to the height of the viewport */
-    min-height: 100vh;
+  /* Sets the text line height for dyslexia accessibility */
+  line-height: calc(1em + 0.5rem);
+  /* Improves readability on MacOS */
+  -webkit-font-smoothing: antialiased;
+  /* Sets the minimum height of the body element to the height of the viewport */
+  min-height: 100vh;
 }
 
 /* All media elements */
@@ -46,10 +46,10 @@ picture,
 video,
 canvas,
 svg {
-    /* Changes the display from inline to block */
-    display: block;
-    /* Sets max-width to 100% so it resizes on different screens */
-    max-width: 100%;
+  /* Changes the display from inline to block */
+  display: block;
+  /* Sets max-width to 100% so it resizes on different screens */
+  max-width: 100%;
 }
 
 /* Sets the font of form elements and buttons to be the same as body font */
@@ -57,7 +57,7 @@ input,
 button,
 textarea,
 select {
-    font: inherit;
+  font: inherit;
 }
 
 /* Prevents text overflowing */
@@ -68,76 +68,77 @@ h3,
 h4,
 h5,
 h6 {
-    overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Basic styles */
 
 body {
-    /* Here we're setting the colours with 
+  /* Here we're setting the colours with 
     the previously defined variables in :root */
-    background: var(--bg);
-    color: var(--fg);
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    text-align: center;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  text-align: center;
 }
 
 h2 {
-    margin-bottom: 0.5em;
-    font-size: 1.25rem;
+  margin-bottom: 0.5em;
+  font-size: 1.25rem;
 }
 
 /* Layout */
 
 .flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-    padding: 3rem 2rem;
-    width: fit-content;
-    margin-inline: auto;
-    max-width: 38rem;
+  padding: 3rem 2rem;
+  width: fit-content;
+  margin-inline: auto;
+  max-width: 38rem;
 }
 
 .pfp {
-    margin-inline: auto;
-    background-image: linear-gradient(45deg,
-            hsl(332deg 38% 45%) 0%,
-            hsl(337deg 20% 85%) 20%,
-            hsl(337deg 20% 85%) 80%,
-            hsl(332deg 38% 45%) 100%);
-    border-radius: 50%;
-    border: 0.5rem solid var(--accent);
-    width: 150px;
-    aspect-ratio: 1 / 1;
-    object-fit: contain;
+  margin-inline: auto;
+  background-image: linear-gradient(
+    45deg,
+    hsl(332deg 38% 45%) 0%,
+    hsl(337deg 20% 85%) 20%,
+    hsl(337deg 20% 85%) 80%,
+    hsl(332deg 38% 45%) 100%
+  );
+  border-radius: 50%;
+  border: 0.5rem solid var(--accent);
+  width: 150px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
 }
 
 .action-btns {
-    gap: 1.5em;
-    margin-block: 1.5em;
+  gap: 1.5em;
+  margin-block: 1.5em;
 }
 
 .cards {
-    display: grid;
-    gap: 1em 3em;
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
+  display: grid;
+  gap: 1em 3em;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
 }
 
 .full-width {
-    grid-column-start: span 2;
+  grid-column-start: span 2;
 }
 
 @media screen and (max-width: 600px) {
-
-    .half-width {
-        grid-column-start: span 2;
-    }
+  .half-width {
+    grid-column-start: span 2;
+  }
 }
 
 /* Custom styles */
@@ -145,150 +146,147 @@ h2 {
 /* Pills */
 
 .pill {
-    background: var(--accent);
-    padding: 0.5em;
-    border-radius: 1em;
-    border: none;
+  background: var(--accent);
+  padding: 0.5em;
+  border-radius: 1em;
+  border: none;
 }
 
 /* Buttons */
 
 .btn {
-    background: var(--btn-bg);
-    color: var(--btn-fg);
-    border: none;
-    cursor: pointer;
-    transition: all .3s;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 .btn:focus-visible {
-    outline: var(--btn-highlight) solid 3px;
+  outline: var(--btn-highlight) solid 3px;
 }
 
 .btn:hover {
-    background-color: var(--btn-highlight);
-
+  background-color: var(--btn-highlight);
 }
 
 .btn:active {
-    transform: translateY(2px);
+  transform: translateY(2px);
 }
 
 /*----------  Main app  ----------*/
 
 .card .pill {
-    font-weight: 600;
-    margin-bottom: 1em;
-    font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1em;
+  font-size: 1.5rem;
 }
 
 .btn-action {
-    font-size: 1.8rem;
-    padding: 0.5em 1.5em;
-    border-radius: 0.5em;
-    --btn-bg: var(--highlight);
-    --btn-highlight: var(--accent);
+  font-size: 1.8rem;
+  padding: 0.5em 1.5em;
+  border-radius: 0.5em;
+  --btn-bg: var(--highlight);
+  --btn-highlight: var(--accent);
 }
-
 
 /*----------  Choose your pet  ----------*/
 
 .pet-imgs {
-    margin-block: 3em;
-    gap: 3em;
+  margin-block: 3em;
+  gap: 3em;
 }
 
 .pet-imgs .pfp {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .pet-imgs .pfp:active {
-    transform: translateY(2px);
+  transform: translateY(2px);
 }
 
 .cyp-input {
-    gap: 1em;
+  gap: 1em;
 }
 
-[type=radio] {
-    visibility: hidden;
-    position: absolute;
+[type="radio"] {
+  visibility: hidden;
+  position: absolute;
 }
 
-[type=radio]:checked + img {
-    border-color: var(--highlight)
+[type="radio"]:checked + img {
+  border-color: var(--highlight);
 }
 
 #cyp-name::placeholder {
-    opacity: .5;
+  opacity: 0.5;
 }
 
 #cyp-name {
-    color: var(--fg);
-    padding: .5em 1em;
-    max-width: 12em;
+  color: var(--fg);
+  padding: 0.5em 1em;
+  max-width: 12em;
 }
 
 #cyp-name:focus {
-    outline: .25em solid var(--highlight);
+  outline: 0.25em solid var(--highlight);
 }
 
 .btn-name {
-    --btn-bg: var(--highlight);
-    --btn-highlight: var(--accent);
-    padding: .3rem;
-    border-radius: 50%;
+  --btn-bg: var(--highlight);
+  --btn-highlight: var(--accent);
+  padding: 0.3rem;
+  border-radius: 50%;
 }
-
 
 /*----------  POP UP  ----------*/
 
 .popup-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(68, 53, 75, 0.8);
-    display: grid;
-    place-content: center center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(68, 53, 75, 0.8);
+  display: grid;
+  place-content: center center;
 }
 
 .popup {
-    background: var(--bg);
-    margin: 2em;
-    padding: 2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-    border-radius: 2em;
-    box-shadow: 0 .25em .25em rgba(0, 0, 0, 0.25);
+  background: var(--bg);
+  margin: 2em;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  border-radius: 2em;
+  box-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.25);
 }
 
 .emoji {
-    font-size: 6rem;
-    padding-block: .2em .4em;
+  font-size: 6rem;
+  padding-block: 0.2em 0.4em;
 }
 
 .achievement-text {
-    color: var(--highlight);
+  color: var(--highlight);
 }
 
 .btn-popup {
-    --btn-bg: var(--accent);
-    --btn-fg: var(--fg);
-    --btn-highlight: var(--highlight);
-    font-size: .8rem;
-    font-weight: 700;
-    padding: .2em;
-    border-radius: .8em;
-    width: 50%;
+  --btn-bg: var(--accent);
+  --btn-fg: var(--fg);
+  --btn-highlight: var(--highlight);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.2em;
+  border-radius: 0.8em;
+  width: 50%;
 }
 
 /*----------  JS dependent classes  ----------*/
 
 .hidden {
-    display: none;
+  display: none;
 }

@@ -169,11 +169,12 @@ h2 {
 
 .pill {
     background: var(--accent);
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     padding: 0.5em;
     border-radius: 1em;
-    font-weight: 600;
-    margin-bottom: 1em;
+    border: none;
+    /* font-weight: 600; */
+    /* margin-bottom: 1em; */
 }
 
 
@@ -201,4 +202,18 @@ h2 {
 
 [type=radio]:checked + img {
     border-color: var(--highlight)
+}
+
+#cyp-name::placeholder {
+    opacity: .5;
+
+}
+
+#cyp-name {
+    color: var(--fg);
+    padding: .5em 1em;
+}
+
+#cyp-name:focus {
+    outline: 4px solid var(--highlight);
 }

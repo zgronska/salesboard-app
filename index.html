@@ -7,7 +7,7 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
-    <title>Salesboard App</title>
+    <title>Pocket Pet App</title>
     <link rel="stylesheet" href="index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,10 +17,11 @@
   </head>
 
   <body>
-    <!-- <div class="container">
+    <section class="container" id="app-section">
       <header>
-        <h1 class="page-title">Pet Care App</h1>
-        <img src="./images/cat 1.png" class="pfp" />
+        <h1 class="page-title" id="pet-name">Pocket Pet</h1>
+        <!-- "Pocket Pet" will be replaced with user name input -->
+        <img src="./images/cat 1.png" class="pfp" id="pet-pic" />
       </header>
 
       <div class="action-btns">
@@ -50,18 +51,27 @@
           <div class="pill" id="level">3</div>
         </div>
       </div>
-    </div> -->
-    <!-- <section class="container" id="cyp-section">
+    </section>
+    <section class="container" id="cyp-section">
       <h1 class="page-title">Choose your pet</h1>
       <div class="pet-imgs">
-        <img src="./images/dog 4.png" alt="Cartoon dog" class="pfp" /><img
+        <img
+          src="./images/dog 4.png"
+          alt="Cartoon dog"
+          class="pfp"
+          id="cyp-cat" /><img
           src="./images/cat 5.png"
           alt="Cartoon cat"
-          class="pfp" />
+          class="pfp"
+          id="cyp-cat" />
       </div>
       <div class="cyp-input">
-        <input type="text" name="name" id="name" placeholder="Pet name" />
-        <button class="btn btn-name">
+        <input
+          type="text"
+          name="cyp-name"
+          id="cyp-name"
+          placeholder="Pet name" />
+        <button class="btn btn-name" id="cyp-sendbtn">
           <svg
             width="32"
             height="32"
@@ -83,13 +93,13 @@
           </svg>
         </button>
       </div>
-    </section> -->
+    </section>
     <div class="popup-container">
       <div class="popup">
-        <span class="emoji">💝</span>
+        <span class="emoji" id="achievement-emoji">💝</span>
         <h2 class="achievement-title">Achievement unlocked!</h2>
         <p class="achievement-text">Your pet levelled up!</p>
-        <button class="btn btn-popup">Play on!</button>
+        <button class="btn btn-popup" id="btn-popup">Play on!</button>
       </div>
     </div>
     <script src="index.js"></script>

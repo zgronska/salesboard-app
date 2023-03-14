@@ -88,6 +88,32 @@ h2 {
     font-size: 1.25rem;
 }
 
+/* Buttons */
+
+.btn {
+    background: var(--btn-bg);
+    color: var(--btn-fg);
+    border: none;
+    font-size: 1.8rem;
+    padding: 0.5em 1.5em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.btn:focus-visible {
+    outline: var(--btn-highlight) solid 3px;
+}
+
+.btn:hover {
+    background-color: var(--btn-highlight);
+
+}
+
+.btn:active {
+    transform: translateY(2px);
+}
+
 /* Layout */
 
 .container {
@@ -139,30 +165,6 @@ h2 {
 
 /* Custom styles */
 
-/* Buttons */
-
-.btn {
-    background: var(--highlight);
-    font-size: 1.8rem;
-    padding: 0.5em 1.5em;
-    border-radius: 0.5em;
-    cursor: pointer;
-    transition: all .3s;
-}
-
-.btn:focus-visible {
-    outline: var(--accent) solid 3px;
-}
-
-.btn:hover {
-    background-color: var(--accent);
-
-}
-
-.btn:active {
-    transform: translateY(2px);
-}
-
 /* Pills */
 
 .pill {
@@ -172,4 +174,31 @@ h2 {
     border-radius: 1em;
     font-weight: 600;
     margin-bottom: 1em;
+}
+
+
+/*----------  Choose your pet  ----------*/
+
+.pet-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-block: 3em;
+    gap: 3em;
+}
+
+.pet-imgs .pfp {
+    cursor: pointer;
+}
+
+.pet-imgs .pfp:active {
+    transform: translateY(2px);
+}
+
+[type=radio] {
+    visibility: hidden;
+    position: absolute;
+}
+
+[type=radio]:checked + img {
+    border-color: var(--highlight)
 }

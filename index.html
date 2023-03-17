@@ -6,24 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
-    <title>Salesboard App</title>
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <title>Pocket Pet App</title>
     <link rel="stylesheet" href="index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <div class="container">
+    <!-- APP SECTION -->
+    <section class="container" id="app-section">
       <header>
-        <h1 class="page-title">Pet Care App</h1>
-        <img src="./images/cat 1.png" class="pfp" />
+        <h1 class="page-title" id="pet-name">Pocket Pet</h1>
+        <!-- "Pocket Pet" will be replaced with user name input -->
+        <img src="./images/cat 1.png" class="pfp" id="pet-pic" />
       </header>
 
-      <div class="action-btns">
+      <div class="action-btns flex">
         <button class="btn btn-action" id="feed-btn">🍖</button>
         <button class="btn btn-action" id="play-btn">⚽</button>
         <button class="btn btn-action" id="groom-btn">🧼</button>
@@ -49,6 +53,78 @@
           <h2>Pet Level</h2>
           <div class="pill" id="level">3</div>
         </div>
+      </div>
+    </section>
+
+    <!-- CHOOSE YOUR PET SECTION -->
+    <section class="container hidden" id="cyp-section">
+      <!-- Toggle 'hidden' class -->
+      <h1 class="page-title">Choose your pet</h1>
+      <div class="pet-imgs flex">
+        <label for="cyp-dog">
+          <input type="radio" name="cyp" id="cyp-dog" />
+          <img src="./images/dog 4.png" alt="Cartoon dog" class="pfp" />
+        </label>
+        <label for="cyp-cat">
+          <input type="radio" name="cyp" id="cyp-cat" />
+          <img src="./images/cat 5.png" alt="Cartoon cat" class="pfp" />
+        </label>
+      </div>
+      <div class="cyp-input flex">
+        <input
+          required
+          type="text"
+          name="cyp-name"
+          id="cyp-name"
+          placeholder="Pet name"
+          class="pill"
+        />
+        <button class="btn btn-name" id="cyp-sendbtn">
+          <svg
+            width="24px"
+            viewBox="-2.4 -2.4 28.80 28.80"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            stroke="#ffffff"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M20 12L4 12"
+                stroke="#ffffff"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M14 18L19.9375 12.0625V12.0625C19.972 12.028 19.972 11.972 19.9375 11.9375V11.9375L14 6"
+                stroke="#ffffff"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- POP UP -->
+    <div class="popup-container hidden">
+      <!-- Toggle 'hidden' class -->
+      <div class="popup">
+        <span class="emoji" id="achievement-emoji">💝</span>
+        <!-- Achievement rendered here -->
+        <h2 class="achievement-title">Achievement unlocked!</h2>
+        <p class="achievement-text">Your pet levelled up!</p>
+        <button class="btn btn-popup" id="btn-popup">Play on!</button>
       </div>
     </div>
     <script src="index.js"></script>

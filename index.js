@@ -1,3 +1,6 @@
+import {petCareItemsArray} from '/data.js'
+import {achievementItemsArray} from '/data.js'
+
 //* Select HTML elements
 
 //? Main app
@@ -40,3 +43,47 @@ const popupBtn = document.getElementById("btn-popup"); // Close popup button
 
 //TODO: Add event listeners to the buttons
 //code here
+
+ 
+function renderMainApp() {
+    const appSection = document.getElementById("app-section")
+    appSection.innerHTML = `
+        <header>
+            <h1 class="page-title" id="pet-name">Pocket Pet</h1>
+            <!-- "Pocket Pet" will be replaced with user name input -->
+            <img src="./images/cat 1.png" class="pfp" id="pet-pic" />
+        </header>
+
+        <div class="action-btns flex">
+            <button class="btn btn-action" id="feed-btn">🍖</button>
+            <button class="btn btn-action" id="play-btn">⚽</button>
+            <button class="btn btn-action" id="groom-btn">🧼</button>
+        </div>
+
+        <div class="cards">
+            <div class="card full-width">
+            <h2>Pet care</h2>
+            <div class="pill" id="pet-care">🍖🍖🍖⚽🍖🍖🧼⚽⚽</div>
+            </div>
+
+            <div class="card full-width">
+            <h2>Achievements</h2>
+            <div class="pill" id="achievements">🐕💝🦴‍</div>
+            </div>
+
+            <div class="card half-width">
+            <h2>Total Score</h2>
+            <div class="pill" id="score">649</div>
+            </div>
+
+            <div class="card half-width">
+            <h2>Pet Level</h2>
+            <div class="pill" id="level">3</div>
+            </div>
+        </div>
+    `
+
+   // -bring in the submitted data from the "choose your pet" -form
+}
+
+renderMainApp()

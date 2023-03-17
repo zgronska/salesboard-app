@@ -3,6 +3,9 @@ import {achievementItemsArray} from '/data.js'
 
 //* Select HTML elements
 
+// Body
+const body = document.querySelector("body")
+
 //? Main app
 
 const petName = document.getElementById("pet-name"); // Pet name heading
@@ -44,8 +47,29 @@ const popupBtn = document.getElementById("btn-popup"); // Close popup button
 //TODO: Add event listeners to the buttons
 //code here
 
- 
+
+// EVENT LISTENERS FOR BUTTONS 
+
+body.addEventListener("click", function(e){	
+	if (e.target.id === "feed-btn"){
+		addToPetCareArray("food")
+	} else if (e.target.id === "play-btn"){
+		addToPetCareArray("play")
+	} else if (e.target.id === "groom-btn"){
+		addToPetCareArray("groom")
+	} else if (e.target.id === "reset-btn"){
+		resetGame()
+	} else if (e.target.id === "cyp-sendbtn"){
+		renderMainApp()
+    }
+})
+
 function renderMainApp() {
+
+// here my idea was to first get the data from the choose your pet section
+// and then render the app section in this function
+// but lets see how it goes: maybe we want to break this into several different functions, maybe not
+
     const appSection = document.getElementById("app-section")
     appSection.innerHTML = `
         <header>
@@ -82,8 +106,6 @@ function renderMainApp() {
             </div>
         </div>
     `
-
-   // -bring in the submitted data from the "choose your pet" -form
 }
 
 renderMainApp()

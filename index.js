@@ -66,18 +66,17 @@ actionBtns.addEventListener("click", function(e){
 //event listener for section containing reset button
 //event listener for CYP section
 
-function renderMainApp() {
-
-// here my idea was to first get the data from the choose your pet section
-// and then render the app section in this function
-// but lets see how it goes: maybe we want to break this into several different functions, maybe not
+function renderMainApp(name, pet) {
 
     const appSection = document.getElementById("app-section")
     appSection.innerHTML = `
         <header>
-            <h1 class="page-title" id="pet-name">Pocket Pet</h1>
-            <!-- "Pocket Pet" will be replaced with user name input -->
-            <img src="./images/cat 1.png" class="pfp" id="pet-pic" />
+            <h1 class="page-title" id="pet-name">${name}</h1>
+            // Not sure what would be the best way to render the pics, because they're dependent both on the choice in CYP, and the levelling up
+            // Option one: hardcode the HTML. Not sure how to implement level up change later
+            <img src="./images/${pet} 1.png" class="pfp" id="pet-pic" />
+            // Option two: separate function that renders the initial pic & changes the pic on level up
+            renderPetPic(pet, 1)
         </header>
 
         <div class="action-btns flex">
@@ -89,22 +88,22 @@ function renderMainApp() {
         <div class="cards">
             <div class="card full-width">
             <h2>Pet care</h2>
-            <div class="pill" id="pet-care">🍖🍖🍖⚽🍖🍖🧼⚽⚽</div>
+            <div class="pill" id="pet-care"></div>
             </div>
 
             <div class="card full-width">
             <h2>Achievements</h2>
-            <div class="pill" id="achievements">🐕💝🦴‍</div>
+            <div class="pill" id="achievements"></div>
             </div>
 
             <div class="card half-width">
             <h2>Total Score</h2>
-            <div class="pill" id="score">649</div>
+            <div class="pill" id="score">0</div>
             </div>
 
             <div class="card half-width">
             <h2>Pet Level</h2>
-            <div class="pill" id="level">3</div>
+            <div class="pill" id="level">1</div>
             </div>
         </div>
     `

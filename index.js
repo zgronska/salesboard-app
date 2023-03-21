@@ -1,5 +1,4 @@
-import {petCareItemsArray} from '/data.js'
-import {achievementItemsArray} from '/data.js'
+import { petCareItemsArray, achievementItemsArray } from '/data.js'
 
 //* Select HTML elements
 

@@ -49,19 +49,22 @@ const popupBtn = document.getElementById("btn-popup"); // Close popup button
 
 // EVENT LISTENERS FOR BUTTONS 
 
-body.addEventListener("click", function(e){	
+const actionBtns = document.querySelector(".action-btns")
+
+actionBtns.addEventListener("click", function(e){	
 	if (e.target.id === "feed-btn"){
 		addToPetCareArray("food")
 	} else if (e.target.id === "play-btn"){
 		addToPetCareArray("play")
 	} else if (e.target.id === "groom-btn"){
 		addToPetCareArray("groom")
-	} else if (e.target.id === "reset-btn"){
-		resetGame()
-	} else if (e.target.id === "cyp-sendbtn"){
-		renderMainApp()
-    }
+	} 
+	
+	
 })
+
+//event listener for section containing reset button
+//event listener for CYP section
 
 function renderMainApp() {
 

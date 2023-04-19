@@ -2,16 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
     />
     <title>Pocket Pet App</title>
-    <link rel="stylesheet" href="index.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="index.css"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
@@ -20,21 +36,119 @@
 
   <body>
     <!-- APP SECTION -->
-      <section class="container" id="app-section">
-      </section>
+    <section
+      class="container"
+      id="app-section"
+    >
+      <header>
+        <h1
+          class="page-title"
+          id="pet-name"
+        >
+          ${name}
+        </h1>
+
+        <img
+          src="./images/${pet} 1.png"
+          class="pfp"
+          id="pet-pic"
+        />
+      </header>
+
+      <div
+        class="action-btns flex"
+        id="action-btns"
+      >
+        <button
+          class="btn btn-action"
+          id="feed"
+        >
+          🍖
+        </button>
+        <button
+          class="btn btn-action"
+          id="play"
+        >
+          ⚽
+        </button>
+        <button
+          class="btn btn-action"
+          id="groom"
+        >
+          🧼
+        </button>
+      </div>
+
+      <div class="cards">
+        <div class="card full-width">
+          <h2>Pet care</h2>
+          <div
+            class="pill"
+            id="pet-care"
+          ></div>
+        </div>
+
+        <div class="card full-width">
+          <h2>Achievements</h2>
+          <div
+            class="pill"
+            id="achievements"
+          ></div>
+        </div>
+
+        <div class="card half-width">
+          <h2>Total Score</h2>
+          <div
+            class="pill"
+            id="score"
+          >
+            0
+          </div>
+        </div>
+
+        <div class="card half-width">
+          <h2>Pet Level</h2>
+          <div
+            class="pill"
+            id="level"
+          >
+            1
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- CHOOSE YOUR PET SECTION -->
-    <section class="container hidden" id="cyp-section">
+    <section
+      class="container hidden"
+      id="cyp-section"
+    >
       <!-- Toggle 'hidden' class -->
       <h1 class="page-title">Choose your pet</h1>
       <div class="pet-imgs flex">
         <label for="cyp-dog">
-          <input type="radio" name="cyp" id="cyp-dog" />
-          <img src="./images/dog 4.png" alt="Cartoon dog" class="pfp" />
+          <input
+            type="radio"
+            name="cyp"
+            id="cyp-dog"
+          />
+          <img
+            src="./images/dog 4.png"
+            alt="Cartoon dog"
+            class="pfp"
+          />
         </label>
         <label for="cyp-cat">
-          <input type="radio" name="cyp" id="cyp-cat" />
-          <img src="./images/cat 5.png" alt="Cartoon cat" class="pfp" />
+          <input
+            type="radio"
+            name="cyp"
+            id="cyp-cat"
+          />
+          <img
+            src="./images/cat 5.png"
+            alt="Cartoon cat"
+            class="pfp"
+          />
         </label>
       </div>
       <div class="cyp-input flex">
@@ -46,7 +160,10 @@
           placeholder="Pet name"
           class="pill"
         />
-        <button class="btn btn-name" id="cyp-sendbtn">
+        <button
+          class="btn btn-name"
+          id="cyp-sendbtn"
+        >
           <svg
             width="24px"
             viewBox="-2.4 -2.4 28.80 28.80"
@@ -54,7 +171,10 @@
             xmlns="http://www.w3.org/2000/svg"
             stroke="#ffffff"
           >
-            <g id="SVGRepo_bgCarrier" stroke-width="0" />
+            <g
+              id="SVGRepo_bgCarrier"
+              stroke-width="0"
+            />
 
             <g
               id="SVGRepo_tracerCarrier"
@@ -87,13 +207,25 @@
     <div class="popup-container hidden">
       <!-- Toggle 'hidden' class -->
       <div class="popup">
-        <span class="emoji" id="achievement-emoji">💝</span>
+        <span
+          class="emoji"
+          id="achievement-emoji"
+          >💝</span
+        >
         <!-- Achievement rendered here -->
         <h2 class="achievement-title">Achievement unlocked!</h2>
         <p class="achievement-text">Your pet levelled up!</p>
-        <button class="btn btn-popup" id="btn-popup">Play on!</button>
+        <button
+          class="btn btn-popup"
+          id="btn-popup"
+        >
+          Play on!
+        </button>
       </div>
     </div>
-    <script src="index.js" type="module"></script>
+    <script
+      src="index.js"
+      type="module"
+    ></script>
   </body>
 </html>

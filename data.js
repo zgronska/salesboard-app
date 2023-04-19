@@ -1,62 +1,76 @@
-export const petCareItemsArray = [
-    {
-		emoji: "🍖",
-		id: "food",
-		point: 1,
-	},
-    {
-		emoji: "⚽",
-		id: "play",
-		point: 2,
-	},
-    {
-		emoji: "🧼",
-		id: "groom",
-		point: 3,
-	},
+// First, check if there is already an object in local storage. If yes, use that. If not, create a new one with starting values.
+const userData = JSON.parse(localStorage.getItem("userData")) || {
+  petName: "",
+  petType: "dog",
+  level: 1,
+  points: {
+    feedPoints: 0,
+    playPoints: 0,
+    groomPoints: 0,
+  },
+  achievements: [],
+}
+
+// ? Not sure if we need this:
+const actionsArray = [
+  {
+    emoji: "🍖",
+    id: "action-food",
+  },
+  {
+    emoji: "⚽",
+    id: "action-play",
+  },
+  {
+    emoji: "🧼",
+    id: "action-groom",
+  },
 ]
 
 const achievementItemsArray = [
   {
-    id: 1,
+    id: "achv-1",
     name: "Welcome Home!",
     emoji: "🐾",
-    condition: "Interact with your pet for the first time"
+    condition: "Interact with your pet for the first time",
   },
   {
-    id: 2,
+    id: "achv-2",
     name: "Master Groomer",
     emoji: "🛁",
-    condition: "Reach a certain number of grooming points"
+    condition: "Reach a certain number of grooming points",
   },
   {
-    id: 3,
+    id: "achv-3",
     name: "Gourmet Chef",
     emoji: "🥩",
-    condition: "Reach X number of feeding points"
+    condition: "Reach X number of feeding points",
   },
   {
-    id: 4,
+    id: "achv-4",
     name: "Loving Companion",
     emoji: "⚽",
-    condition: "Reach X number of playing points"
+    condition: "Reach X number of playing points",
   },
   {
-    id: 6,
+    id: "achv-6",
     name: "Perfect Pooch",
     emoji: "🐶",
-    condition: "Reach the maximum level for your dog"
+    condition: "Reach the maximum level for your dog",
   },
   {
-    id: 7,
+    id: "achv-7",
     name: "Cool Cat",
     emoji: "😺",
-    condition: "Reach the maximum level for your cat"
+    condition: "Reach the maximum level for your cat",
   },
   {
-    id: 10,
+    id: "achv-10",
     name: "Loyal Friend",
     emoji: "💝",
-    condition: "Interact with your pet for a certain number of consecutive days"
-  }
-];
+    condition:
+      "Interact with your pet for a certain number of consecutive days",
+  },
+]
+
+export { userData, actionsArray, achievementItemsArray }
